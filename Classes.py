@@ -1,26 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sat Oct 23 18:47:20 2021
-
-@author: marcs
-"""
-
 import numpy as np
 from dataclasses import dataclass
 import time
 import plotly.graph_objs as go
-import random
 import matplotlib.pyplot as plt
-import csv 
-import timeit, functools
-import winsound
-
-from scipy.optimize import minimize 
-
 import scipy
-
-
-
 
 #%% Definitive Classes
 @dataclass
@@ -35,7 +18,6 @@ class Atom:
         self.directions = np.concatenate( (np.eye(3) , -np.eye(3)) , 0)
                  
 Magnesium = Atom(sct=2e4,lmbds=[457e-9,462e-9,634e-9,285e-9],m_uma=24.305)
-
 Calcium = Atom(sct=3.1416e4,lmbds=[657.5e-9,452.7e-9,732.8,422.8],m_uma=40.078)
 
 class MonteCarlo:
